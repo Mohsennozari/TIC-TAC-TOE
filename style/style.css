@@ -1,1 +1,83 @@
-/*# sourceMappingURL=style.css.map */
+/* General body styles */
+body {
+  font-family: "Georgia", "Times New Roman", Times, serif; /* Sets the font family for the entire page */
+  text-align: center; /* Centers the text within the body */
+  background-color: #f0f8ff; /* Light background color for better contrast */
+  margin: 0; /* Removes default margin */
+  padding: 20px; /* Adds padding around the body */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Arranges children in a column */
+  justify-content: center; /* Centers children vertically */
+  align-items: center; /* Centers children horizontally */
+  height: 100vh; /* Sets the height to full viewport height */
+}
+
+/* Styles for the main heading */
+h1 {
+  margin-bottom: 20px; /* Adds space below the heading to separate it from the game board */
+  color: #333; /* Darker color for better readability */
+  font-size: 36px; /* Increases font size for better visibility */
+}
+
+/* Styles for each cell in the game */
+.cell {
+  width: 75px; /* Sets the width of each cell */
+  height: 75px; /* Sets the height of each cell */
+  border: 2px solid #007bff; /* Adds a solid border with a blue color */
+  border-radius: 10px; /* Rounds the corners of each cell */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow effect */
+  line-height: 75px; /* Vertically centers the text within the cell */
+  font-size: 24px; /* Sets the font size for the text inside the cell */
+  cursor: pointer; /* Changes the mouse cursor to a pointer when hovering over the cell */
+  transition: background-color 0.3s, transform 0.2s; /* Adds smooth transition effects */
+}
+
+/* Hover effect for cells */
+.cell:hover {
+  background-color: #e7f1ff; /* Light background on hover */
+  transform: scale(1.05); /* Slightly enlarges the cell on hover */
+}
+
+/* Container for the grid of cells */
+#cellContainer {
+  display: grid; /* Uses CSS Grid layout for arranging cells */
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 columns of equal width */
+  gap: 10px; /* Adds space between cells */
+  width: 225px; /* Sets the total width of the container */
+  margin: 0; /* Removes margin to keep it centered */
+}
+
+/* Styles for the reset button */
+#resetBtn {
+  background-color: rgb(6, 152, 152); /* Sets the background color of the button */
+  border-radius: 8px; /* Rounds the corners of the button */
+  border: none; /* Removes the default border */
+  margin-top: 20px; /* Adds space above the button */
+  padding: 10px 20px; /* Adds internal padding for the button */
+  font-size: 20px; /* Sets the font size for the button text */
+  font-weight: 500; /* Sets the font weight for the button text */
+  color: white; /* Sets the text color to white for contrast */
+  cursor: pointer; /* Changes the mouse cursor to a pointer when hovering over the button */
+  transition: background-color 0.3s, transform 0.2s; /* Adds smooth transition effects */
+}
+
+/* Hover effect for reset button */
+#resetBtn:hover {
+  background-color: rgb(4, 120, 120); /* Darkens the button color on hover */
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+/* Styles for the game container */
+#gameContainer {
+  font-family: "Georgia", "Times New Roman", Times, serif; /* Consistent font family */
+  text-align: center; /* Centers text */
+  font-size: 20px; /* Sets font size */
+  color: #333; /* Text color */
+  margin-top: 20px; /* Margin above the game container */
+  margin-bottom: 20px; /* Margin below the game container */
+}
+
+/* Focus styles for accessibility */
+#resetBtn:focus {
+  outline: 2px solid #007bff; /* Adds an outline for keyboard navigation */
+}/*# sourceMappingURL=style.css.map */
