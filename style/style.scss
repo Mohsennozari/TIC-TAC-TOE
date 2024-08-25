@@ -6,7 +6,7 @@ $text-color-dark: #ffffff;
 $heading-bg-color: #ffd500;
 $cell-border-color: #007bff;
 $cell-hover-bg-color: #e7f1ff;
-$reset-btn-bg-color: rgb(0, 196, 166);
+$reset-btn-bg-color: rgb(254, 136, 136);
 $reset-btn-hover-bg-color: rgb(4, 120, 120);
 $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
@@ -20,6 +20,41 @@ $cell-color-6: #a9e34b; // Light Green
 $cell-color-7: #faa2c1; // Light Pink
 $cell-color-8: #69db7c; // Lime Green
 $cell-color-9: #748ffc; // Light Blue
+
+// Keyframe animations
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-1px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 // General body styles
 body {
@@ -43,6 +78,7 @@ body {
     font-family: "Permanent Marker", cursive;
     text-align: center;
     color: $text-color-light;
+    animation: fadeIn 1s ease-out;
 }
 
 // Styles for the main heading
@@ -55,6 +91,7 @@ h1 {
     border-radius: 8px;
     box-shadow: $box-shadow;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    animation: scaleUp 1s ease-out;
 }
 
 // Styles for the status text
@@ -63,6 +100,7 @@ h1 {
     color: $text-color-light;
     font-size: 36px;
     transition: color 0.3s;
+    animation: fadeIn 1.5s ease-out;
 }
 
 // Styles for each cell in the game
@@ -81,11 +119,13 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    animation: fadeIn 2s ease-out;
 
     &:hover {
         background-color: $cell-hover-bg-color;
         transform: scale(1.1);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        animation: pulse 1s infinite;
     }
 }
 
@@ -94,16 +134,6 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-
-    .cell:nth-child(1) { background-color: $cell-color-1; }
-    .cell:nth-child(2) { background-color: $cell-color-2; }
-    .cell:nth-child(3) { background-color: $cell-color-3; }
-    .cell:nth-child(4) { background-color: $cell-color-4; }
-    .cell:nth-child(5) { background-color: $cell-color-5; }
-    .cell:nth-child(6) { background-color: $cell-color-6; }
-    .cell:nth-child(7) { background-color: $cell-color-7; }
-    .cell:nth-child(8) { background-color: $cell-color-8; }
-    .cell:nth-child(9) { background-color: $cell-color-9; }
 }
 
 // Styles for the reset button
@@ -120,6 +150,7 @@ h1 {
     box-shadow: $box-shadow;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 2.5s ease-out;
 
     &:hover {
         background-color: $reset-btn-hover-bg-color;
@@ -181,10 +212,26 @@ h1 {
     box-shadow: $box-shadow;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 3s ease-out;
 
     &:hover {
         background-color: #f63b7d;
         transform: scale(1.05);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     }
+}
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    .cell:nth-child(1) { background-color: $cell-color-1; }
+    .cell:nth-child(2) { background-color: $cell-color-2; }
+    .cell:nth-child(3) { background-color: $cell-color-3; }
+    .cell:nth-child(4) { background-color: $cell-color-4; }
+    .cell:nth-child(5) { background-color: $cell-color-5; }
+    .cell:nth-child(6) { background-color: $cell-color-6; }
+    .cell:nth-child(7) { background-color: $cell-color-7; }
+    .cell:nth-child(8) { background-color: $cell-color-8; }
+    .cell:nth-child(9) { background-color: $cell-color-9; }
 }
