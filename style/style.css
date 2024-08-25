@@ -1,6 +1,7 @@
 body {
   font-family: "Georgia", "Times New Roman", Times, serif;
   background-color: #f0f8ff;
+  color: #333;
   margin: 0;
   padding: 0;
   display: flex;
@@ -104,4 +105,24 @@ h1 {
 #resetBtn:hover {
   background-color: rgb(4, 120, 120);
   transform: scale(1.05);
+}
+
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #ecf0f1;
+}
+.dark-mode h1 {
+  background-color: #b39500;
+}
+.dark-mode .cell {
+  border-color: #ecf0f1;
+}
+.dark-mode .cell:hover {
+  background-color: white;
+}
+.dark-mode #resetBtn {
+  background-color: #00917b;
+}
+.dark-mode #resetBtn:hover {
+  background-color: #022e2e;
 }/*# sourceMappingURL=style.css.map */

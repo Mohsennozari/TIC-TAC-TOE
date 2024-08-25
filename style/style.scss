@@ -1,12 +1,14 @@
 // Define color variables
-$background-color:               #f0f8ff;
-$text-color:                     #333;
-$heading-bg-color:               #ffd500;
-$cell-border-color:              #007bff;
-$cell-hover-bg-color:            #e7f1ff;
-$reset-btn-bg-color:             rgb(0, 196, 166);
-$reset-btn-hover-bg-color:       rgb(4, 120, 120);
-$box-shadow: 0 4px 8px           rgba(0, 0, 0, 0.2);
+$background-color-light: #f0f8ff;
+$text-color-light: #333;
+$background-color-dark: #1e1e1e;
+$text-color-dark: #ecf0f1;
+$heading-bg-color: #ffd500;
+$cell-border-color: #007bff;
+$cell-hover-bg-color: #e7f1ff;
+$reset-btn-bg-color: rgb(0, 196, 166);
+$reset-btn-hover-bg-color: rgb(4, 120, 120);
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
 // Define vibrant colors for cells
 $cell-color-1: #ff6b6b; // Red
@@ -22,7 +24,8 @@ $cell-color-9: #748ffc; // Light Blue
 // General body styles
 body {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    background-color: $background-color;
+    background-color: $background-color-light;
+    color: $text-color-light;
     margin: 0;
     padding: 0;
     display: flex;
@@ -38,13 +41,13 @@ body {
     align-items: center;
     font-family: "Permanent Marker", cursive;
     text-align: center;
-    color: $text-color;
+    color: $text-color-light;
 }
 
 // Styles for the main heading
 h1 {
     margin-bottom: 20px;
-    color: $text-color;
+    color: $text-color-light;
     font-size: 66px;
     background-color: $heading-bg-color;
     padding: 10px 20px;
@@ -52,9 +55,10 @@ h1 {
     box-shadow: $box-shadow;
 }
 
+// Styles for the status text
 #statustext {
     margin-bottom: 20px;
-    color: $text-color;
+    color: $text-color-light;
     font-size: 36px;
 }
 
@@ -133,7 +137,7 @@ h1 {
     padding: 10px 20px;
     font-size: 30px;
     font-weight: 700;
-    color: $text-color;
+    color: $text-color-light;
     box-shadow: $box-shadow;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
@@ -141,5 +145,29 @@ h1 {
     &:hover {
         background-color: $reset-btn-hover-bg-color;
         transform: scale(1.05);
+    }
+}
+
+// Dark mode styles
+.dark-mode {
+    background-color: $background-color-dark;
+    color: $text-color-dark;
+
+    h1 {
+        background-color: darken($heading-bg-color, 15%);
+    }
+
+    .cell {
+        border-color: $text-color-dark;
+        &:hover {
+            background-color: lighten($cell-hover-bg-color, 10%);
+        }
+    }
+
+    #resetBtn {
+        background-color: darken($reset-btn-bg-color, 10%);
+        &:hover {
+            background-color: darken($reset-btn-hover-bg-color, 15%);
+        }
     }
 }
