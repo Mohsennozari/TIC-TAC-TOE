@@ -1,7 +1,7 @@
 body {
   font-family: "Georgia", "Times New Roman", Times, serif;
-  background-color: #f0f8ff;
-  color: #333;
+  background-color: #ffffff;
+  color: #545454;
   margin: 0;
   padding: 0;
   display: flex;
@@ -16,12 +16,12 @@ body {
   align-items: center;
   font-family: "Permanent Marker", cursive;
   text-align: center;
-  color: #333;
+  color: #545454;
 }
 
 h1 {
   margin-bottom: 20px;
-  color: #333;
+  color: #545454;
   font-size: 66px;
   background-color: #ffd500;
   padding: 10px 20px;
@@ -31,14 +31,13 @@ h1 {
 
 #statustext {
   margin-bottom: 20px;
-  color: #333;
+  color: #545454;
   font-size: 36px;
 }
 
 .cell {
   width: 150px;
   height: 150px;
-  border: 2px solid #007bff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-size: 48px;
@@ -97,7 +96,7 @@ h1 {
   padding: 10px 20px;
   font-size: 30px;
   font-weight: 700;
-  color: #333;
+  color: #545454;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
@@ -108,14 +107,14 @@ h1 {
 }
 
 .dark-mode {
-  background-color: #1e1e1e;
-  color: #ecf0f1;
+  background-color: #000000;
+  color: #ffffff;
 }
 .dark-mode h1 {
   background-color: #b39500;
 }
 .dark-mode .cell {
-  border-color: #ecf0f1;
+  border-color: #ffffff;
 }
 .dark-mode .cell:hover {
   background-color: white;

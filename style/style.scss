@@ -1,8 +1,8 @@
 // Define color variables
-$background-color-light: #f0f8ff;
-$text-color-light: #333;
-$background-color-dark: #1e1e1e;
-$text-color-dark: #ecf0f1;
+$background-color-light: #ffffff;
+$text-color-light: #545454;
+$background-color-dark: #000000;
+$text-color-dark: #ffffff;
 $heading-bg-color: #ffd500;
 $cell-border-color: #007bff;
 $cell-hover-bg-color: #e7f1ff;
@@ -66,7 +66,7 @@ h1 {
 .cell {
     width: 150px;
     height: 150px;
-    border: 2px solid $cell-border-color;
+    
     border-radius: 10px;
     box-shadow: $box-shadow;
     font-size: 48px;
