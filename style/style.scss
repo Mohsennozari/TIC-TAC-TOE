@@ -109,9 +109,9 @@ h1 {
     height: 150px;
     background-color: $cell-color-1; // Default color
     border-radius: 10px;
-    border: 2px solid $cell-border-color;
+    
     box-shadow: $box-shadow;
-    font-size: 48px;
+    font-size: 98px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;

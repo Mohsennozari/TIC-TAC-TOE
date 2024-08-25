@@ -77,9 +77,8 @@ h1 {
   height: 150px;
   background-color: #ff6b6b;
   border-radius: 10px;
-  border: 2px solid #007bff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 48px;
+  font-size: 98px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
