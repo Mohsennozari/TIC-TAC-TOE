@@ -124,4 +124,25 @@ h1 {
 }
 .dark-mode #resetBtn:hover {
   background-color: #022e2e;
+}
+
+#toggleModeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff7aa8;
+  border-radius: 8px;
+  border: none;
+  font-family: "Permanent Marker", cursive;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #545454;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+#toggleModeBtn:hover {
+  background-color: #f63b7d;
+  transform: scale(1.05);
 }/*# sourceMappingURL=style.css.map */

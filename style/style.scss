@@ -171,3 +171,25 @@ h1 {
         }
     }
 }
+#toggleModeBtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff7aa8;
+    border-radius: 8px;
+    border: none;
+    font-family: "Permanent Marker", cursive;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: $text-color-light;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+        background-color: #f63b7d;
+        transform: scale(1.05);
+        
+    }
+}
