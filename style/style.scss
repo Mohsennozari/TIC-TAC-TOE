@@ -212,7 +212,7 @@ h1 {
     box-shadow: $box-shadow;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    animation: fadeIn 3s ease-out;
+    
 
     &:hover {
         background-color: #f63b7d;
