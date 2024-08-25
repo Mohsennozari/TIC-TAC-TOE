@@ -1,7 +1,17 @@
-/* General body styles */
+// Define color variables
+$background-color: #f0f8ff;
+$text-color: #333;
+$heading-bg-color: #ffd500;
+$cell-border-color: #007bff;
+$cell-hover-bg-color: #e7f1ff;
+$reset-btn-bg-color: rgb(0, 196, 166);
+$reset-btn-hover-bg-color: rgb(4, 120, 120);
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+// General body styles
 body {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    background-color: #f0f8ff;
+    background-color: $background-color;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,40 +20,40 @@ body {
     height: 100vh;
 }
 
-/* Styles for the game container */
+// Styles for the game container
 #gameContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Permanent Marker", cursive;
     text-align: center;
-    color: #333;
+    color: $text-color;
 }
 
-/* Styles for the main heading */
+// Styles for the main heading
 h1 {
     margin-bottom: 20px;
-    color: #333;
+    color: $text-color;
     font-size: 66px;
-    background-color: #ffd500;
+    background-color: $heading-bg-color;
     padding: 10px 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: $box-shadow;
 }
 
 #statustext {
     margin-bottom: 20px;
-    color: #333;
+    color: $text-color;
     font-size: 36px;
 }
 
-/* Styles for each cell in the game */
+// Styles for each cell in the game
 .cell {
     width: 150px;
     height: 150px;
-    border: 2px solid #007bff;
+    border: 2px solid $cell-border-color;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: $box-shadow;
     font-size: 48px;
     font-weight: bold;
     cursor: pointer;
@@ -52,24 +62,23 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    &:hover {
+        background-color: $cell-hover-bg-color;
+        transform: scale(1.05);
+    }
 }
 
-/* Hover effect for cells */
-.cell:hover {
-    background-color: #e7f1ff;
-    transform: scale(1.05);
-}
-
-/* Container for the grid of cells */
+// Container for the grid of cells
 #cellContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
-/* Styles for the reset button */
+// Styles for the reset button
 #resetBtn {
-    background-color: rgb(0, 196, 166);
+    background-color: $reset-btn-bg-color;
     border-radius: 8px;
     border: none;
     margin-top: 20px;
@@ -77,14 +86,13 @@ h1 {
     padding: 10px 20px;
     font-size: 30px;
     font-weight: 700;
-    color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: $text-color;
+    box-shadow: $box-shadow;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-}
 
-/* Hover effect for reset button */
-#resetBtn:hover {
-    background-color: rgb(4, 120, 120);
-    transform: scale(1.05);
+    &:hover {
+        background-color: $reset-btn-hover-bg-color;
+        transform: scale(1.05);
+    }
 }
