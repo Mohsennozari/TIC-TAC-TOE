@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  transition: background-color 0.3s;
 }
 
 #gameContainer {
@@ -27,23 +28,27 @@ h1 {
   padding: 10px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 #statustext {
   margin-bottom: 20px;
   color: #545454;
   font-size: 36px;
+  transition: color 0.3s;
 }
 
 .cell {
   width: 150px;
   height: 150px;
+  background-color: #ff6b6b;
   border-radius: 10px;
+  border: 2px solid #007bff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-size: 48px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +56,8 @@ h1 {
 }
 .cell:hover {
   background-color: #e7f1ff;
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 #cellContainer {
@@ -99,11 +105,12 @@ h1 {
   color: #545454;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 #resetBtn:hover {
   background-color: rgb(4, 120, 120);
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode {
@@ -112,9 +119,14 @@ h1 {
 }
 .dark-mode h1 {
   background-color: #b39500;
+  color: #ffffff;
+}
+.dark-mode #statustext {
+  color: #ffffff;
 }
 .dark-mode .cell {
   border-color: #ffffff;
+  background-color: #ff6b6b;
 }
 .dark-mode .cell:hover {
   background-color: white;
@@ -124,6 +136,12 @@ h1 {
 }
 .dark-mode #resetBtn:hover {
   background-color: #022e2e;
+}
+.dark-mode #toggleModeBtn {
+  background-color: #ff7aa8;
+}
+.dark-mode #toggleModeBtn:hover {
+  background-color: #f63b7d;
 }
 
 #toggleModeBtn {
@@ -140,9 +158,10 @@ h1 {
   color: #545454;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 #toggleModeBtn:hover {
   background-color: #f63b7d;
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }/*# sourceMappingURL=style.css.map */
