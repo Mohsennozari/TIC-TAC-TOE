@@ -59,6 +59,33 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
+#cellContainer .cell:nth-child(1) {
+  background-color: #ff6b6b;
+}
+#cellContainer .cell:nth-child(2) {
+  background-color: #4dabf7;
+}
+#cellContainer .cell:nth-child(3) {
+  background-color: #38d9a9;
+}
+#cellContainer .cell:nth-child(4) {
+  background-color: #f06595;
+}
+#cellContainer .cell:nth-child(5) {
+  background-color: #ffd43b;
+}
+#cellContainer .cell:nth-child(6) {
+  background-color: #a9e34b;
+}
+#cellContainer .cell:nth-child(7) {
+  background-color: #faa2c1;
+}
+#cellContainer .cell:nth-child(8) {
+  background-color: #69db7c;
+}
+#cellContainer .cell:nth-child(9) {
+  background-color: #748ffc;
+}
 
 #resetBtn {
   background-color: rgb(0, 196, 166);

@@ -1,12 +1,23 @@
 // Define color variables
-$background-color: #f0f8ff;
-$text-color: #333;
-$heading-bg-color: #ffd500;
-$cell-border-color: #007bff;
-$cell-hover-bg-color: #e7f1ff;
-$reset-btn-bg-color: rgb(0, 196, 166);
-$reset-btn-hover-bg-color: rgb(4, 120, 120);
-$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+$background-color:               #f0f8ff;
+$text-color:                     #333;
+$heading-bg-color:               #ffd500;
+$cell-border-color:              #007bff;
+$cell-hover-bg-color:            #e7f1ff;
+$reset-btn-bg-color:             rgb(0, 196, 166);
+$reset-btn-hover-bg-color:       rgb(4, 120, 120);
+$box-shadow: 0 4px 8px           rgba(0, 0, 0, 0.2);
+
+// Define vibrant colors for cells
+$cell-color-1: #ff6b6b; // Red
+$cell-color-2: #4dabf7; // Blue
+$cell-color-3: #38d9a9; // Green
+$cell-color-4: #f06595; // Pink
+$cell-color-5: #ffd43b; // Yellow
+$cell-color-6: #a9e34b; // Light Green
+$cell-color-7: #faa2c1; // Light Pink
+$cell-color-8: #69db7c; // Lime Green
+$cell-color-9: #748ffc; // Light Blue
 
 // General body styles
 body {
@@ -69,11 +80,47 @@ h1 {
     }
 }
 
-// Container for the grid of cells
+// Assign vibrant colors to each cell using nth-child
 #cellContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+
+    .cell:nth-child(1) {
+        background-color: $cell-color-1;
+    }
+
+    .cell:nth-child(2) {
+        background-color: $cell-color-2;
+    }
+
+    .cell:nth-child(3) {
+        background-color: $cell-color-3;
+    }
+
+    .cell:nth-child(4) {
+        background-color: $cell-color-4;
+    }
+
+    .cell:nth-child(5) {
+        background-color: $cell-color-5;
+    }
+
+    .cell:nth-child(6) {
+        background-color: $cell-color-6;
+    }
+
+    .cell:nth-child(7) {
+        background-color: $cell-color-7;
+    }
+
+    .cell:nth-child(8) {
+        background-color: $cell-color-8;
+    }
+
+    .cell:nth-child(9) {
+        background-color: $cell-color-9;
+    }
 }
 
 // Styles for the reset button
